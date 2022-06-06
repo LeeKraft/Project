@@ -32,9 +32,7 @@ class AnalyzeWindow:
     mac = list()
     user = str()
     def __init__(self, parent):
-        """
-        Sets all the necessary attributes for an object of the AnalyzeWindow class
-        """
+        """ Sets all the necessary attributes for an object of the AnalyzeWindow class """
         self.root = Toplevel(parent)
         self.root.title("Анализ трафика")
         self.root.geometry('{}x{}+{}+{}'.format(1400, 700, self.root.winfo_screenwidth()//2 - 700, self.root.winfo_screenheight()//2 - 350))
