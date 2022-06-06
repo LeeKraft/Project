@@ -5,7 +5,6 @@ import re
 import glob
 from threading import Thread
 from tkinter import Tk, END, NORMAL, WORD, DISABLED, SUNKEN, Menu, LabelFrame, Label, Button, messagebox, Frame, IntVar, Radiobutton, Entry
-from tkinter import messagebox
 from tkinter.ttk import Combobox
 from tkinter.scrolledtext import ScrolledText
 
@@ -17,9 +16,7 @@ class CollectorWindow:
     bg_middle = "#c7d3d6"
     running = False
     def __init__(self):
-        """
-        Sets all the necessary attributes for an object of the CollectorWindow class
-        """
+        """ Sets all the necessary attributes for an object of the CollectorWindow class """
         self.root = Tk()
         self.root.title("Сбор трафика")
         self.root.geometry('{}x{}+{}+{}'.format(600, 500, self.root.winfo_screenwidth()//2 - 300, self.root.winfo_screenheight()//2 - 250))
@@ -104,7 +101,7 @@ class CollectorWindow:
         self.frm_top.place(x=0, y=0)
         self.frm_middle.place(x=0, y=320)
         self.frm_bottom.place(x=0, y=370)
-        
+
     def run(self):
         self.root.protocol('WM_DELETE_WINDOW', self.on_close)
         self.root.mainloop()
