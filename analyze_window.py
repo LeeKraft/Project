@@ -93,7 +93,7 @@ class AnalyzeWindow:
             self.txt_status.insert(END, "Выбран файл:\n")
             self.txt_status.insert(END, f"{os.path.basename(r'{}'.format(str(self.file)))}\n")
         self.txt_status.configure(state=DISABLED)
-    
+
     def load(self):
         self.txt_status.configure(state=NORMAL)
         if not self.file:
@@ -319,7 +319,7 @@ class AnalyzeWindow:
             self.txt_status.configure(state=DISABLED)
             thread = Thread(target=self.insecure)
             self.running=True
-            thread.start()   
+            thread.start()
         if self.cmb_basic.current() == 7 and not self.running:
             self.txt_status.configure(state=NORMAL)
             self.txt_status.delete("1.0", END)
@@ -710,7 +710,7 @@ class AnalyzeWindow:
                 except ValueError:
                     inner['time'].append(datetime.datetime.strptime(row[2], '%Y-%m-%d %H:%M:%S'))
         if not len(inner['length']) or not len(outer['length']):
-            messagebox.showerror("Ошибка", f"MAC адреса вашего устойства нет в выбранном файле.\n")
+            messagebox.showerror("Ошибка", "MAC адреса вашего устойства нет в выбранном файле.\n")
             return
         inner_volume = 0
         outer_volume = 0
