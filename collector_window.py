@@ -16,7 +16,7 @@ class CollectorWindow:
     bg_middle = "#c7d3d6"
     running = False
     def __init__(self):
-        """ Sets all the necessary attributes for an object of the CollectorWindow class """
+        """Sets all the necessary attributes for an object of the CollectorWindow class"""
         self.root = Tk()
         self.root.title("Сбор трафика")
         self.root.geometry('{}x{}+{}+{}'.format(600, 500, self.root.winfo_screenwidth()//2 - 300, self.root.winfo_screenheight()//2 - 250))
@@ -117,7 +117,7 @@ class CollectorWindow:
                 messagebox.showinfo("Информация", f"Ваш IP адрес: \n{ip.stdout.split()[0]}")
         except Exception as e:
             messagebox.showerror("Ошибка", f"Не удалось узнать IP адрес.\nПрограмма выдала исключение: {str(e)}")
-    
+
     def show_info(self):
         messagebox.showinfo("Информация", "Вы работаете с программным компонентом, выполняющим функцию сбора сетевого трафика.\nВведите необходимые фильтры для собираемого трафика, либо оставьте поля пустыми.\nЧтобы начать сбор, нажмите кнопку 'Старт'.\nЧтобы остановить - кнопку 'Стоп'.\nЧтобы перейти в программный компонент, реализующий анализ трафика, нажмите кнопку 'Анализ'.")
     
